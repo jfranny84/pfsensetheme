@@ -1,0 +1,286 @@
+/* Copyright © 2026 pfSense-Blue-Silver-Orange Theme Created By Josh Frandsen / RestoreMyPC.Net. All Rights Reserved.
+   Attribution applies to the custom design modifications. */
+/* Complete matching login.css. Back up your existing login.css before replacement. */
+@import url("/css/logo.css");
+
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+header {
+}
+
+#headerrow {
+    position: fixed;
+    height: 90px;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.pagebody {
+    position: absolute;
+    top:90px;
+    bottom:25px;
+    width: 100%;
+    color: white;
+    overflow: scroll;
+}
+
+.pagebodywarn {
+    position: absolute;
+    top:140px;
+    bottom:25px;
+    width: 100%;
+    color: white;
+}
+
+.nowarning {
+	height: 80px;
+	padding-top: 10px;
+}
+
+#hostspan {
+	text-align: right;
+}
+
+.msgbox {
+	padding-right: 60px;
+	padding-top: 25px;
+}
+
+@media only screen and (max-width : 768px) {
+    /* only size 'xs' and below */
+    #headerrow {
+        height: 100px;
+    }
+
+    .pagebody {
+    	top: 100px;
+    }
+
+    .pagebody2 {
+		top: 250px;
+    }
+
+    .nowarning {
+		height: 60px;
+	}
+
+	.msgbox {
+		padding-right: 0px;
+		padding-top: 0px;
+	}
+
+	#hostspan {
+		text-align: center;
+	}
+}
+
+#footertext {
+    position: fixed;
+    height: 25px;
+    bottom: 0;
+    width: 100%;
+    background-color: #212121;
+    color: white;
+    text-align: center;
+}
+
+.loginCont {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    height: 55%;
+    width: 80%;
+}
+
+.error-panel a {
+	color: white;
+}
+p.form-title
+{
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 5%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+form.login
+{
+    max-width: 270px;
+    margin: 0 auto 20px auto;
+}
+
+form.login input[type="text"], form.login input[type="password"]
+{
+    width: 100%;
+    margin: 0;
+    padding: 10px 10px;
+    background: 0;
+    border: 0;
+    border-bottom: 1px solid #FFFFFF;
+    outline: 0;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    outline: 0;
+}
+
+form.login input[type="submit"]
+{
+    width: 60%;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 36px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    display: block;
+    margin : 0 auto;
+    margin-top: 36px;
+}
+
+form.login input[type="submit"]:hover
+{
+    transition: background-color 0.5s ease;
+}
+
+form.login label, form.login a
+{
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+form.login a
+{
+    transition: color 0.5s ease;
+}
+
+form.login a:hover
+{
+    color: #2ecc71;
+}
+
+.logoCol {
+    height: 100%;
+}
+
+#logodiv svg#logo {
+    width: 240px;
+    height: 100%;
+}
+
+/** Re-style web-kit browser autocomplete boxes (Fixes Chrome's ugly yellow background) **/
+@-webkit-keyframes autofill {
+    to {
+        color: white;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+/* Blue, Silver & Orange pfSense login styling. Append to the existing login.css. */
+body {
+  color: var(--bs-ink);
+  background-color: #e6edf2;
+  background-image:
+    radial-gradient(ellipse at 50% 25%, rgba(248,250,252,.90), transparent 75%),
+    radial-gradient(ellipse at 100% 0%, rgba(84,145,181,.12), transparent 62%),
+    radial-gradient(ellipse at 0% 100%, rgba(210,107,29,.035), transparent 65%),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22680%22%20height%3D%22480%22%20viewBox%3D%220%200%20680%20480%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%2331a4ee%22%20stroke-opacity%3D%22.045%22%20stroke-width%3D%221.4%22%3E%3Cpath%20d%3D%22M0%2058h96l38%2038h130l44-44h150l38%2038h184M0%20210h62l48-48h126l38%2038h176l54-54h176M0%20354h124l46-46h160l40%2040h156l48-48h106M42%200v58M134%2096v76M308%2052V0M496%2090v76M110%20162v106l-36%2036v176M274%20200v70l56%2038M450%20200v64l76%2084v132M574%20300V226l46-46V0%22%2F%3E%3Crect%20x%3D%22302%22%20y%3D%22182%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%226%22%2F%3E%3Cpath%20d%3D%22M312%20182v-14m12%2014v-14m12%2014v-14m12%2014v-14M312%20234v14m12-14v14m12-14v14m12-14v14M302%20194h-14m14%2012h-14m14%2012h-14M354%20194h14m-14%2012h14m-14%2012h14%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23b8cfde%22%20stroke%3D%22%2327a0ee%22%20stroke-opacity%3D%22.07%22%3E%3Ccircle%20cx%3D%2296%22%20cy%3D%2258%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22264%22%20cy%3D%2296%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22496%22%20cy%3D%2290%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22110%22%20cy%3D%22162%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22200%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22170%22%20cy%3D%22308%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22526%22%20cy%3D%22348%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
+    linear-gradient(150deg, #eef2f5 0%, #e6edf2 55%, #dce6ed 100%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 960px 678px, 100% 100%;
+  background-position: center, center, center, center top, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+html { min-height:100%; }
+body { min-height:100vh; margin:0; }
+.loginCont { width:100%; max-width:420px; margin:32px auto; padding:36px; box-sizing:border-box; background:linear-gradient(160deg,#f8fafc,#e5eef3); border:1px solid #aec0cc; border-top:4px solid #107ec5; border-radius:16px; box-shadow:0 18px 50px rgba(20,65,94,.15); }
+form.login { margin:0; padding:0; background:transparent; box-shadow:none; }
+.form-title { color:#13405c; font-size:25px; font-weight:600; margin:0 0 24px; }
+form.login input[type=text], form.login input[type=password] { display:block; box-sizing:border-box; width:100%; margin:10px 0 20px; padding:14px 15px; color:#13405c; background:#f8fafc; border:1px solid #aec0cc; border-radius:7px; font:inherit; }
+form.login input:focus { border-color:#107ec5; outline:2px solid rgba(16,126,197,.2); outline-offset:2px; }
+form.login input[type=submit],form.login button[type=submit] { width:100%; margin-top:8px; padding:14px; border:1px solid #08496f; border-radius:7px; color:white; background:linear-gradient(#107ec5,#0b5a8c); font:600 15px "Segoe UI",Arial,sans-serif; cursor:pointer; }
+form.login input[type=submit]:hover,form.login button[type=submit]:hover { background:linear-gradient(#bd5814,#984009); border-color:#8e3a06; }
+.logoCol { color:#13405c; }
+#footertext, #footertext .text-muted { color:#466579; text-align:center; }
+#footertext::after { content:"Copyright © 2026 pfSense-Blue-Silver-Orange Theme Created By Josh Frandsen / RestoreMyPC.Net. All Rights Reserved"; display:block; padding:12px; font-size:12px; }
+@media(max-width:480px) { .loginCont { padding:25px; max-width:calc(100% - 32px); } }
+
+
+/* Adapt the stock login layout and header to the matching theme. */
+#headerrow {
+  background:linear-gradient(180deg,#e9eff3,#c8d7e0,#a9c2d2);
+  border-bottom:3px solid #209ded;
+  box-shadow:0 3px 12px rgba(18,59,85,.16);
+  color:#13405c;
+  z-index:10;
+}
+.pagebody,.pagebodywarn {
+  background-color:transparent !important;
+  color:#13405c;
+  bottom:72px;
+  overflow:auto;
+}
+.loginCont {
+  position:relative;
+  top:auto; left:auto;
+  transform:none;
+  height:auto;
+  margin:clamp(28px,10vh,100px) auto 28px;
+}
+form.login { max-width:none; }
+p.form-title { margin:0 0 24px; letter-spacing:2px; color:#13405c; }
+form.login input[type=text],form.login input[type=password] {
+  font-style:normal; font-size:16px; letter-spacing:normal;
+}
+form.login input::placeholder { color:#607d90; opacity:1; }
+form.login label { color:#13405c; }
+form.login a,.error-panel a { color:#107ec5; }
+form.login a:hover,.error-panel a:hover { color:#bd5814; }
+form.login input[type=submit] { margin:22px 0 0; }
+#footertext {
+  height:auto; min-height:52px; padding:7px 12px;
+  box-sizing:border-box;
+  background:linear-gradient(90deg,#e9eff3,#c8d7e0,#e9eff3);
+  border-top:2px solid #d26b1d;
+  color:#13405c;
+}
+#footertext p { margin:0; }
+#footertext::after { padding:5px 0 0; }
+#logodiv svg#logo { max-width:100%; }
+#logodiv svg .logo-st0,#logodiv svg .logo-st1,
+#logodiv svg .logo-st2,#logodiv svg .logo-st3,
+#logodiv svg .logo-st4,#logodiv svg .logo-st5 { fill:#107ec5; }
+#logodiv svg stop:nth-child(1) { stop-color:#79cbff; }
+#logodiv svg stop:nth-child(2) { stop-color:#27a0ed; }
+#logodiv svg stop:nth-child(n+3) { stop-color:#1081ca; }
+#hostspan { color:#13405c; }
+@-webkit-keyframes autofill { to { color:#13405c; background:#f8fafc; } }
+form.login input:-webkit-autofill { -webkit-text-fill-color:#13405c; }
+@media(max-width:768px) {
+  .pagebodywarn { top:140px; }
+  .pagebody2 { top:250px; }
+  .loginCont { margin-top:28px; }
+}
